@@ -9,7 +9,7 @@
 <body>
 
   <div class="form-container">
-    <form action="auth_login.php">
+    <form action="auth_login.php" method="POST">
       Username:<br>
       <input type="text" name="user_name"><br><br>
       Password:<br>
