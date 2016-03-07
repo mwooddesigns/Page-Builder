@@ -43,12 +43,14 @@
     mysqli_data_seek($result, 0);
     if(mysqli_num_rows($result) > 0) {
       while($row = mysqli_fetch_assoc($result)) {
+        $creator = $row['created_by'];
+        if($row['created_by'] == $user) {$creator = "You";}
         echo "<tr>
         <td>{$row['page_id']}</td>
         <td><a href='page-preview.php?pid={$row['page_id']}'>{$row['page_title']}</a></td>
         <td>{$row['template']}</td>
         <td>{$row['form_id']}</td>
-        <td>{$row['created_by']}</td>
+        <td>{$creator}</td>
         </tr>";
       }
     }
