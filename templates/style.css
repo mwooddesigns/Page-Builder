@@ -1,0 +1,64 @@
+body { background-color: #FFFFFF; }
+
+header { background-color: #3d4651; color: #FFF; border: 0; }
+
+.container { max-width: 1070px; }
+
+.container#content { margin-top: 50px; }
+
+.top-content h1 { padding: 0; margin: 0; color: #FFFFFF; font-family: 'open_sansextrabold', sans-serif; }
+
+.top-content h2 { font-size: 18px; color: #FFFFFF; margin-top: 10px; }
+
+.top-content { padding: 50px 40px; background-color: #0377be; color: #FFFFFF; margin-bottom: 0; }
+
+.top-content p { color: #FFFFFF; text-align: center; font-size: 18px; }
+
+.top-content a:link, .top-content a:hover, .top-content a:visited { color: #FFFFFF; text-decoration: underline; }
+
+.traders-pledge { background: #364451; padding: 20px 0px; font-size: 16px; color: #FFFFFF; border-bottom: solid #c7d4e0 1px; }
+
+.traders-pledge h3 { text-transform: uppercase; letter-spacing: 2px; font-size: 12px; padding-bottom: 10px; margin-top: 0; }
+
+.pledge { font-size: 16px; }
+
+.top-content h4 { font-size: 20px; }
+
+form h3 { font-size: 16px; text-align: center; color: #555555; margin-top: 5px; }
+
+.RegForm { background-color: #FFFFFF; }
+
+.RegForm h2 { font-family: 'open_sansextrabold', sans-serif; color: #3d4651; padding: 0; }
+
+.RegForm h3 { margin-top: 10px; margin-bottom: 20px; }
+
+.info { padding: 40px; }
+
+.button { padding: 20px 40px; font-size: 18px; font-family: 'open_sansextrabold', sans-serif; }
+
+.bottom-arrow-dark { float: right; }
+
+.left-content h4 { font-family: 'open_sansextrabold', sans-serif; font-size: 20px; color: #3d4651; line-height: normal; }
+
+.left-content { font-size: 14px; line-height: 24px; }
+
+.as-seen-on-content { background-color: #f3f8fa; padding: 40px; }
+
+footer { background-color: #f3f8fa; }
+
+.seen { background-color: transparent !important; }
+
+.author { padding: 40px; line-height: 24px; border-top: solid #c7d4e0 1px; }
+
+.author h2 { font-family: 'open_sansextrabold', sans-serif; font-size: 20px; color: #3d4651; line-height: normal; margin-top: 0; }
+
+.author img { -webkit-border-radius: 200%; -moz-border-radius: 200%; border-radius: 200%; margin: 0 auto; }
+
+/*--------------------- ---------------------- MOBILE ---------------------- ----------------------*/
+/* Most of the Landing pages break around 767px, so add any mobile additions you need here*/
+@media (max-width: 767px) { .pledge { font-size: 12px; }
+  .info { padding: 40px 0; }
+  .top-content { padding: 40px 10px; }
+  .RegForm { margin-top: 20px; }
+  .author { padding: 40px 20px; }
+  .author img { max-width: 70%; padding: 30px; } }
