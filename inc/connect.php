@@ -16,7 +16,7 @@ $conn = mysqli_connect($servername, $username, $password, $db);
 if (!$conn) {
     die("Connection failed: " . mqli_connect_error());
 } else {
-    echo "Connection Successful!<br />";
+    // echo "Connection Successful!<br />";
 }
 
 ?>
