@@ -5,13 +5,13 @@
     $user_pass = filter_var($_POST["user_pass"], FILTER_SANITIZE_STRING);
 
     $sql = "SELECT * FROM users WHERE user_name='$user_name' AND user_pass='$user_pass'";
-    $result = mysqli_query($conn, $sql);
+    $result = $conn->query($sql);
 
     $check_name = "";
     $check_pass = "";
 
-    if (mysqli_num_rows($result) > 0) {
-        while($row = mysqli_fetch_assoc($result)) {
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_array(MYSQLI_ASSOC)) {
             $check_name = $row["user_name"];
             $check_pass = $row["user_pass"];
         }

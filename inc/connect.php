@@ -10,11 +10,11 @@ $password = "root";
 $db = "page-builder";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $db);
+$conn = new mysqli($servername, $username, $password, $db);
 
 // Check connection
-if (!$conn) {
-    die("Connection failed: " . mqli_connect_error());
+if ($conn->connect_errno) {
+    die("Connection failed: " . $conn->connect_error);
 } else {
     // echo "Connection Successful!<br />";
 }

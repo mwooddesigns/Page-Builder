@@ -4,10 +4,10 @@
   $page_id = $_GET['pid'];
 
   $sql = "SELECT *  FROM pages INNER JOIN content ON pages.page_id=content.page_id WHERE pages.page_id = '$page_id'";
-  $result = mysqli_query($conn, $sql);
+  $result = $conn->query($sql);
 
-  if (mysqli_num_rows($result) > 0) {
-      while($row = mysqli_fetch_assoc($result)) {
+  if ($result->num_rows > 0) {
+      while($row = $result->fetch_array(MYSQLI_ASSOC)) {
           $page_template = $row['template'];
           $form_id = $row['form_id'];
           $page_title = $row['page_title'];
