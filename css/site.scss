@@ -12,6 +12,19 @@ body, html {
   max-width: 1160px;
 }
 
+/* GLOBAL STYLES */
+
+/* Typography */
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+}
+
+
+
 /* DASHBOARD STYLES */
 
 #dashboard table {
@@ -23,7 +36,11 @@ body, html {
     border: solid 1px #000;
     padding-top: 10px;
     padding-bottom: 10px;
-    &.controls a {
+    a:link, a:hover, a:focus, a:active, a:visited {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    &.controls a:link, &.controls a:visited {
       display: inline;
       margin-right: 10px;
       text-decoration: none;

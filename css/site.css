@@ -2,6 +2,12 @@ body, html { margin: 0; padding: 0; min-height: 100%; height: 100%; position: re
 
 .container { display: block; margin: 0 auto; max-width: 1160px; }
 
+/* GLOBAL STYLES */
+/* Typography */
+* { font-family: 'Open Sans', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif; }
+
 /* DASHBOARD STYLES */
 #dashboard table { width: 100%; border-collapse: collapse; }
 
@@ -9,13 +15,15 @@ body, html { margin: 0; padding: 0; min-height: 100%; height: 100%; position: re
 
 #dashboard table td { width: 16.6667%; border: solid 1px #000; padding-top: 10px; padding-bottom: 10px; }
 
-#dashboard table td.controls a { display: inline; margin-right: 10px; text-decoration: none; color: #27ae60; transition: color .2s linear; }
+#dashboard table td a:link, #dashboard table td a:hover, #dashboard table td a:focus, #dashboard table td a:active, #dashboard table td a:visited { color: #2980b9; text-decoration: none; }
 
-#dashboard table td.controls a:hover, #dashboard table td.controls a:active, #dashboard table td.controls a:focus { text-decoration: none; color: #2ecc71; }
+#dashboard table td.controls a:link, #dashboard table td.controls a:visited { display: inline; margin-right: 10px; text-decoration: none; color: #27ae60; transition: color .2s linear; }
 
-#dashboard table td.controls a:nth-child(2) { color: #e74c3c; margin-right: 0; }
+#dashboard table td.controls a:link:hover, #dashboard table td.controls a:link:active, #dashboard table td.controls a:link:focus, #dashboard table td.controls a:visited:hover, #dashboard table td.controls a:visited:active, #dashboard table td.controls a:visited:focus { text-decoration: none; color: #2ecc71; }
 
-#dashboard table td.controls a:nth-child(2):hover, #dashboard table td.controls a:nth-child(2):active, #dashboard table td.controls a:nth-child(2):focus { color: #c0392b; }
+#dashboard table td.controls a:link:nth-child(2), #dashboard table td.controls a:visited:nth-child(2) { color: #e74c3c; margin-right: 0; }
+
+#dashboard table td.controls a:link:nth-child(2):hover, #dashboard table td.controls a:link:nth-child(2):active, #dashboard table td.controls a:link:nth-child(2):focus, #dashboard table td.controls a:visited:nth-child(2):hover, #dashboard table td.controls a:visited:nth-child(2):active, #dashboard table td.controls a:visited:nth-child(2):focus { color: #c0392b; }
 
 /* LOGIN PAGE STYLES */
 .form-container { width: 320px; position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); }

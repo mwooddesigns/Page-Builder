@@ -2,6 +2,8 @@
   if($_COOKIE['LoggedIn'] == 1) {
     header('Location: index.php');
   }
+
+  include('./inc/connect.php');
 ?>
 
 <!DOCTYPE html>
@@ -10,15 +12,19 @@
   <meta charset="UTF-8">
   <title>User Login</title>
 
-  <link rel="stylesheet" href="css/site.css">
+  <?php include('./inc/file-links.php'); ?>
+
+  <link rel="stylesheet" href="./css/site.css">
 </head>
 <body>
 
   <div class="form-container">
 
       <?php
-        if($_GET["e"]==1) {
+        if(isset($_GET["e"])) {
+          if($_GET["e"]==1) {
             echo '<p class="login-error">Please enter a valid username and password.</p>';
+          }
         }
       ?>
 

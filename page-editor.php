@@ -1,6 +1,4 @@
 <?php
-  include('./inc/functions.php');
-
   include('./inc/connect.php');
 
   $user = $_GET['u'];
@@ -27,6 +25,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Page Editor</title>
+
+  <?php include('./inc/file-links.php'); ?>
+
+  <link rel="stylesheet" href="./css/site.css">
 </head>
 <body>
   <h1>You are editing <?php echo $page_title; ?> as <?php echo $user; ?></h1>
