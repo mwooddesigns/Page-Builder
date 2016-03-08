@@ -16,12 +16,30 @@ body, html {
 
 #dashboard table {
   width: 100%;
-  tr {text-align: left;}
+  border-collapse: collapse;
+  tr {text-align: center;}
   td {
     width: 16.6667%;
-    &.controls .fa {
+    border: solid 1px #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &.controls a {
       display: inline;
       margin-right: 10px;
+      text-decoration: none;
+      color: #27ae60;
+      transition: color .2s linear;
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+        color: #2ecc71;
+      }
+      &:nth-child(2) {
+        color: #e74c3c;
+        margin-right: 0;
+        &:hover, &:active, &:focus {
+          color: #c0392b;
+        }
+      }
     }
   }
 }
