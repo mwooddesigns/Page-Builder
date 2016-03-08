@@ -1,4 +1,6 @@
 <?php
+  include('./inc/functions.php');
+
   include('./inc/connect.php');
 
   $user = $_GET['u'];
