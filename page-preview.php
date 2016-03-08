@@ -18,7 +18,7 @@
       }
   }
 
-  include("./templates/$page_template");
+  include("./templates/$page_template/template.php");
 
   include('inc/close.php');
 ?>

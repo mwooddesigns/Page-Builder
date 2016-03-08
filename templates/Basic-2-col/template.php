@@ -30,7 +30,7 @@
 
   <!-- Your StyleSheet -->
   <link rel="stylesheet" href="http://www.markettraders.com/landing-pages/main.css" type="text/css">
-  <link rel="stylesheet" type="text/css" href="./templates/style.css">
+  <link rel="stylesheet" type="text/css" href="./templates/<?php echo $page_template; ?>/style.css">
 
   <!--As Seen On-->
   <link rel="stylesheet" type="text/css" href="http://markettraders.com/asseen/light/css/style.css">
