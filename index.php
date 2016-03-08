@@ -7,7 +7,7 @@
 
   $user = $_GET['u'];
 
-  $sql = "SELECT * FROM pages";
+  $sql = "SELECT * FROM pages INNER JOIN content ON pages.page_id=content.page_id";
   $result = mysqli_query($conn, $sql);
 ?>
 
@@ -39,6 +39,7 @@
       <th>Template</th>
       <th>Form ID</th>
       <th>Creator</th>
+      <th>Controls</th>
     </tr>
 
   <?php
@@ -53,6 +54,7 @@
         <td>{$row['template']}</td>
         <td>{$row['form_id']}</td>
         <td>{$creator}</td>
+        <td class='controls'><i class='fa fa-2x fa-pencil'></i><i class='fa fa-2x fa-trash'></i></td>
         </tr>";
       }
     }

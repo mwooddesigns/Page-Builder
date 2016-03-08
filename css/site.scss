@@ -18,7 +18,11 @@ body, html {
   width: 100%;
   tr {text-align: left;}
   td {
-    width: 20%;
+    width: 16.6667%;
+    &.controls .fa {
+      display: inline;
+      margin-right: 10px;
+    }
   }
 }
 
