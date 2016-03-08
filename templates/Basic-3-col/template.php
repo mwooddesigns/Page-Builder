@@ -1,3 +1,8 @@
+<?php
+  /***********************************
+    Basic 3 Column Layout with Form
+  ***********************************/
+?>
 <!DOCTYPE html>
 <html lang="en">
 
