@@ -118,7 +118,7 @@
   <div class="container" id="content">
     <div class="row">
       <div class="col-sm-6 col-md-6 col-lg-6">
-        <?php echo $content; ?>
+        <?php echo $content_one; ?>
       </div>
       <div class="col-sm-6 col-md-6 col-lg-6">
         <div class="RegForm" data-ng-app="ApertureForm">

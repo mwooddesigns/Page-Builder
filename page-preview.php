@@ -3,7 +3,7 @@
 
   $page_id = $_GET['pid'];
 
-  $sql = "SELECT * FROM pages WHERE page_id = '$page_id'";
+  $sql = "SELECT *  FROM pages JOIN content ON pages.page_id=content.page_id WHERE pages.page_id = '$page_id'";
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result) > 0) {
@@ -13,8 +13,7 @@
           $page_title = $row['page_title'];
           $main_head = $row['headline'];
           $main_subhead = $row['subhead'];
-          $content = $row['main_content'];
-          $sub_content = $row['sub_content'];
+          $content_one = $row['content_one'];
       }
   }
 
