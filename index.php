@@ -54,7 +54,7 @@
         <td>{$row['template']}</td>
         <td>{$row['form_id']}</td>
         <td>{$creator}</td>
-        <td class='controls'><i class='fa fa-2x fa-pencil'></i><i class='fa fa-2x fa-trash'></i></td>
+        <td class='controls'><a href='page-editor.php?u=$user&pid={$row['page_id']}'><i class='fa fa-2x fa-pencil'></a></i><i class='fa fa-2x fa-trash'></i></td>
         </tr>";
       }
     }
