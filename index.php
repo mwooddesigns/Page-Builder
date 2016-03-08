@@ -17,6 +17,8 @@
   <meta charset="UTF-8">
   <title>Dashboard</title>
 
+  <?php include('./inc/file-links.php'); ?>
+
   <link rel="stylesheet" href="./css/site.css">
 </head>
 <body>
