@@ -7,7 +7,7 @@
   $sql = "SELECT *  FROM pages INNER JOIN content ON pages.page_id=content.page_id WHERE pages.page_id = '$page_id'";
   $result = $conn->query($sql);
 
-  if ($result->num_rows > 0) {
+  if ($result->num_rows == 1) {
       while($row = $result->fetch_array(MYSQLI_ASSOC)) {
           $page_template = $row['template'];
           $form_id = $row['form_id'];
