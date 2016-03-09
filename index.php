@@ -33,7 +33,8 @@
 <div class="container" id="dashboard">
 
   <h1>Dashboard</h1>
-  <a href="log-out.php">Log out</a>
+  <a href="log-out.php">Log out</a><br>
+  <a href="create-page.php">Add New</a>
 
   <h2>Pages</h2>
 
