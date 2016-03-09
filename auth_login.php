@@ -24,6 +24,7 @@
         $_POST["user_name"] = "";
         $_POST["user_pass"] = "";
         setcookie("LoggedIn", 1, time()+3600);
+        setcookie("User", $user_name, time()+3600);
         header('Location: index.php?u='.$user_name);
     } else if ($user_name != $check_name || $user_pass != $check_pass) {
         header('Location: login.php?e=1');

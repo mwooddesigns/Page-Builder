@@ -5,7 +5,11 @@
 
   include('./inc/connect.php');
 
-  $user = $_GET['u'];
+  if(isset($_GET['u'])) {
+    $user = $_GET['u'];
+  } else if($_COOKIE['LoggedIn'] == 1) {
+    $user = $_COOKIE['User'];
+  }
 
   $sql = "SELECT * FROM pages INNER JOIN content ON pages.page_id=content.page_id";
   $result = mysqli_query($conn, $sql);
@@ -29,6 +33,7 @@
 <div class="container" id="dashboard">
 
   <h1>Dashboard</h1>
+  <a href="log-out.php">Log out</a>
 
   <h2>Pages</h2>
 
