@@ -21,8 +21,17 @@
 
   include('./inc/connect.php');
 
-  $sql = "INSERT INTO pages (page_title, template, created_by, head_content) VALUES($title, $template, $user, $head)";
+  $sql = "INSERT INTO pages (page_title, template, created_by, head_content) VALUES('$title', '$template', '$user', '$head')";
   $result = $conn->query($sql);
+
+  $page_id = mysqli_insert_id($conn);
+
+  $sql = "INSERT INTO content (page_id, form_id, headline, subhead, content_one, content_two) VALUES ($page_id,$form_id,'$headline','$subhead','$main_content', '$sec_content')";
+  $result = $conn->query($sql);
+
+  echo $page_id;
+
+  header("Location: page-preview.php?pid=$page_id");
 
   include('./inc/close.php');
 ?>

@@ -26,7 +26,7 @@ header { background-color: #3d4651; color: #FFF; border: 0; }
 
 form h3 { font-size: 16px; text-align: center; color: #555555; margin-top: 5px; }
 
-.RegForm { background-color: #FFFFFF; }
+.RegForm { background-color: #FFFFFF; height: auto !important; }
 
 .RegForm h2 { font-family: 'open_sansextrabold', sans-serif; color: #3d4651; padding: 0; }
 
