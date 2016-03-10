@@ -28,6 +28,10 @@
 </head>
 <body>
 
+  <h1>Are you sure you want to delete <?php echo $page_title?>?</h1>
+  <a href="./delete.php?pid=<?php echo $page_id ?>">Yes, delete</a><br />
+  <a href="./index.php">No, cancel</a>
+
 </body>
 </html>
 

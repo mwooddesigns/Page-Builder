@@ -3,3 +3,5 @@
 
 <!-- Google Fonts -->
 <link href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans' rel='stylesheet' type='text/css'>
+
+<script src="./ckeditor/ckeditor.js"></script>

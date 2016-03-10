@@ -21,7 +21,7 @@
       <?php
         if(isset($_GET["e"])) {
           if($_GET["e"]==1) {
-            echo '<p class="login-error">Please enter a valid username and password.</p>';
+            echo '<p class="error">Please enter a valid username and password.</p>';
           }
         }
       ?>

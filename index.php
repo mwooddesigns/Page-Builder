@@ -36,6 +36,14 @@
   <a href="log-out.php">Log out</a><br>
   <a href="create-page.php">Add New</a>
 
+  <?php
+    if(isset($_GET['e'])) {
+      if($_GET['e'] == 2) {
+        echo "<p class='error'>You don't have permissions to delete that page. You are not the owner.</p>";
+      }
+    }
+  ?>
+
   <h2>Pages</h2>
 
   <table>
