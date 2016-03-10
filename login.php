@@ -30,10 +30,10 @@
 
     <form action="auth_login.php" method="POST">
         <h2>Login</h2>
-      Username:<br>
-      <input type="text" name="user_name"><br><br>
-      Password:<br>
-      <input type="password" name="user_pass"><br><br>
+      <!-- Username:<br> -->
+      <input type="text" placeholder="Username" name="user_name"><br><br>
+      <!-- Password:<br> -->
+      <input type="password" placeholder="Password" name="user_pass"><br><br>
       <input type="submit" value="Login">
     </form>
   </div>
