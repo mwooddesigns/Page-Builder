@@ -68,7 +68,7 @@
         <td>{$row['template']}</td>
         <td>{$row['form_id']}</td>
         <td>{$creator}</td>
-        <td class='controls'><a href='page-editor.php?u=$user&pid={$row['page_id']}'><i class='fa fa-2x fa-pencil'></a></i><a href='delete-page.php?u=$user&pid={$row['page_id']}'><i class='fa fa-2x fa-trash'></i></a></td>
+        <td class='controls'><a href='download.php?pid={$row['page_id']}'><i class='fa fa-2x fa-arrow-circle-o-down'></i></a><a href='page-editor.php?u=$user&pid={$row['page_id']}'><i class='fa fa-2x fa-pencil'></a></i><a href='delete-page.php?u=$user&pid={$row['page_id']}'><i class='fa fa-2x fa-trash'></i></a></td>
         </tr>";
       }
     }
