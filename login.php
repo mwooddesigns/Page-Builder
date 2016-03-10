@@ -2,8 +2,6 @@
   if($_COOKIE['LoggedIn'] == 1) {
     header('Location: index.php');
   }
-
-  include('./inc/connect.php');
 ?>
 
 <!DOCTYPE html>

@@ -12,7 +12,7 @@
   }
 
   $sql = "SELECT * FROM pages INNER JOIN content ON pages.page_id=content.page_id";
-  $result = mysqli_query($conn, $sql);
+  $result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -49,9 +49,9 @@
     </tr>
 
   <?php
-    mysqli_data_seek($result, 0);
-    if(mysqli_num_rows($result) > 0) {
-      while($row = mysqli_fetch_assoc($result)) {
+    $result->data_seek(0);
+    if($result->num_rows > 0) {
+      while($row = $result->fetch_array(MYSQLI_ASSOC)) {
         $creator = $row['created_by'];
         if($row['created_by'] == $user) {$creator = "You";}
         echo "<tr>
