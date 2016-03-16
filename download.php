@@ -12,6 +12,7 @@
   if($result->num_rows > 0) {
     while($row = $result->fetch_array(MYSQLI_ASSOC)) {
       $template = $row['template'];
+      $title = $row['page_title'];
     }
   }
 
@@ -44,30 +45,54 @@
 
   echo $css;
 
-  $files_to_download = array(
-    './downloads/index.html',
-    './downloads/style.css'
-  );
+  $files = array('downloads/index.html','downloads/style.css');
 
-  create_zip($files_to_download, 'downloads/download.zip');
+  # create new zip opbject
+  $zip = new ZipArchive();
 
-  // http headers for zip downloads
-  header("Pragma: public");
-  header("Expires: 0");
-  header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-  header("Cache-Control: public");
-  header("Content-Description: File Transfer");
-  header("Content-type: application/octet-stream");
-  header("Content-Disposition: attachment; filename='download.zip'");
-  header("Content-Transfer-Encoding: binary");
-  // header("Content-Length: ".filesize('downloads/download.zip'));
-  // ob_end_flush();
-  // @readfile('downloads/download.zip');
+  # create a temp file & open it
+  $tmp_file = tempnam('.','');
+  $zip->open($tmp_file, ZipArchive::CREATE);
 
-  //Force download of html file
-  $fp = fopen('downloads/download.zip',"r");
-  fpassthru($fp);
-  fclose($fp);
+  # loop through each file
+  foreach($files as $file){
+
+      # download file
+      $download_file = file_get_contents($file);
+
+      #add it to the zip
+      $zip->addFromString(basename($file),$download_file);
+
+  }
+
+  # close zip
+  $zip->close();
+
+  if (headers_sent())
+  {
+      // HTTP header has already been sent
+      return false;
+  }
+  // clean buffer(s)
+  while (ob_get_level() > 0)
+  {
+      ob_end_clean();
+  }
+
+  # send the file to the browser as a download
+  ob_start();
+  header($_SERVER['SERVER_PROTOCOL'].' 200 OK');
+  header('Content-disposition: attachment; filename=' . $title . '.zip');
+  header('Content-type: application/zip');
+  header("Content-Transfer-Encoding: Binary");
+  header('Pragma: no-cache');
+  header("Content-Length: ".filesize($tmp_file));
+  ob_flush();
+  ob_clean();
+  readfile($tmp_file);
+  unlink($tmp_file);
+  unlink("downloads/index.html");
+  unlink("downloads/style.css");
 
   include('./inc/close.php');
 ?>
