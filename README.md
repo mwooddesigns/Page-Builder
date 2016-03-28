@@ -1,3 +1,5 @@
 # Page-Builder
 
-Webpage generator to be made (Details to come soon)
+Webpage generator being developed for Market Traders Institute
+
+No longer being developed in this repo. Moved to private company repo for security reasons.
